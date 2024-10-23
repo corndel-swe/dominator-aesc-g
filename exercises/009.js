@@ -7,8 +7,19 @@
  * @param {'rock' | 'paper' | 'scissors'} choice2 The choice of player 2.
  * @returns {'player1' | 'player2' | 'tie'} The result of the game.
  */
+export const rockPaperScissors = (choice1, choice2) => {
+  const outcomes = {
+    rock: { rock: 'tie', paper: 'player2', scissors: 'player1' },
+    paper: { rock: 'player1', paper: 'tie', scissors: 'player2' },
+    scissors: { rock: 'player2', paper: 'player1', scissors: 'tie' }
+  };
+
+  return outcomes[choice1][choice2];
+};
+
+/*
 export const rockPaperScissors =
-  (choice1, choice2/* TODO: accept `choice1` and `choice2` as parameters */) => {
+  (choice1, choice2) => {
     // TODO: if player1 wins, return 'player1'
     // TODO: if player2 wins, return 'player2'
     // TODO: if tie, return 'tie'
@@ -40,3 +51,4 @@ export const rockPaperScissors =
       }
     }
   }
+*/
