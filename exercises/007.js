@@ -9,6 +9,7 @@
 export function main() {
   // TODO: Call the functions in the correct order
   // TODO: Return the product of the three returned values
+  return meFirst() * meMiddle() * meLast()
 }
 
 function meFirst() {
